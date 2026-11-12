@@ -2,7 +2,7 @@
 
 OpenClaw channel plugin that lets you talk to OpenClaw from TailsTalk 2 DMs and channels.
 
-Status: 0.1.0, written against the OpenClaw 2026.11.3 plugin SDK and the TailsTalk 2 API docs. Not yet tested against a live TailsTalk 2 server.
+Status: **does not work yet.** The plugin installs, but the TailsTalk 2 account never stays connected, so the bot never comes online. The cause is not confirmed. Likely candidates: how the gateway starts the account (`gateway.startAccount`), and the inbound runtime wiring, which was written from the docs and never run live. The plugin is disabled in OpenClaw for now.
 
 ## How it connects
 

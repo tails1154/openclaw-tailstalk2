@@ -4,11 +4,9 @@
   "description": "OpenClaw channel plugin for TailsTalk 2",
   "license": "GPL-3.0-only",
   "type": "module",
-  "main": "./index.ts",
+  "main": "./dist/index.js",
   "files": [
-    "index.ts",
-    "setup-entry.ts",
-    "src",
+    "dist",
     "openclaw.plugin.json",
     "README.md",
     "LICENSE"
@@ -27,11 +25,15 @@
     "@types/node": "^22.0.0"
   },
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
     "typecheck": "tsc --noEmit"
   },
   "openclaw": {
-    "extensions": ["./index.ts"],
-    "setupEntry": "./setup-entry.ts",
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "setupEntry": "./dist/setup-entry.js",
     "channel": {
       "id": "tailstalk2",
       "label": "TailsTalk 2",

@@ -20,6 +20,10 @@
         "additionalProperties": false,
         "properties": {
           "enabled": { "type": "boolean" },
+          "useEnv": {
+            "type": "boolean",
+            "description": "Whether the bot token is read from the TAILSTALK2_BOT_TOKEN environment variable"
+          },
           "baseUrl": {
             "type": "string",
             "description": "TailsTalk 2 API root, e.g. https://tails1154.com:9961/api"
