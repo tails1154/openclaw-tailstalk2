@@ -1,0 +1,50 @@
+{
+  "id": "tailstalk2",
+  "name": "TailsTalk 2",
+  "description": "OpenClaw channel plugin for TailsTalk 2",
+  "categories": ["channels"],
+  "channels": ["tailstalk2"],
+  "activation": {
+    "onStartup": false
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "channelConfigs": {
+    "tailstalk2": {
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "baseUrl": {
+            "type": "string",
+            "description": "TailsTalk 2 API root, e.g. https://tails1154.com:9961/api"
+          },
+          "botToken": {
+            "type": "string",
+            "description": "Bot token created in TailsTalk 2 user settings"
+          },
+          "allowFrom": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "User IDs allowed to DM the bot"
+          },
+          "requireMention": {
+            "type": "boolean",
+            "default": true,
+            "description": "In server channels, only respond when the bot is mentioned"
+          }
+        }
+      },
+      "uiHints": {
+        "baseUrl": { "label": "API root URL" },
+        "botToken": { "label": "Bot token", "sensitive": true },
+        "allowFrom": { "label": "Allowed user IDs" }
+      }
+    }
+  }
+}

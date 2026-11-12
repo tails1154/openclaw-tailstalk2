@@ -1,0 +1,44 @@
+{
+  "name": "@tails1154/openclaw-channel-tailstalk2",
+  "version": "0.1.0",
+  "description": "OpenClaw channel plugin for TailsTalk 2",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "main": "./index.ts",
+  "files": [
+    "index.ts",
+    "setup-entry.ts",
+    "src",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "openclaw": ">=2026.11.3"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "openclaw": "2026.11.3",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "openclaw": {
+    "extensions": ["./index.ts"],
+    "setupEntry": "./setup-entry.ts",
+    "channel": {
+      "id": "tailstalk2",
+      "label": "TailsTalk 2",
+      "blurb": "Talk to OpenClaw from TailsTalk 2 DMs and channels."
+    },
+    "compat": {
+      "pluginApi": ">=2026.11.3"
+    }
+  }
+}
