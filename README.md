@@ -1,4 +1,4 @@
-# openclaw-channel-tailstalk2
+# openclaw-tailstalk2
 
 OpenClaw channel plugin that lets you talk to OpenClaw from TailsTalk 2 DMs and channels.
 
